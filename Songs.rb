@@ -1,6 +1,6 @@
 class Songs
 
-  def initialize (name, room_name)
+  def initialize (name)
     @name = name
 
   end
@@ -13,4 +13,7 @@ class Songs
   #   return @room_name
   # end
 
+def add_song_to_room
+  @room_1[] << @Song_1
+end
 end

@@ -9,9 +9,9 @@ class TestGuests < MiniTest::Test
 
   def setup 
 
-    @Guest_1 = Guests.new({"Jane"=>100})
-    @Guest_2 = Guests.new({"Gemma"=>175})
-    @Guest_3 = Guests.new({"Lesley"=>300})
+    @Guest_1 = Guests.new("Jane")
+    @Guest_2 = Guests.new("Gemma")
+    @Guest_3 = Guests.new("Lesley")
 
   end
 

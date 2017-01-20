@@ -30,6 +30,10 @@ class TestRooms < MiniTest::Test
     assert_equal(0,@room_3.guests_within_room)
   end
 
+  def test_move_guest_to_room
+    assert_equal(0, @room_1.guests_within_room)
+  end
+
   # def test_room_is_empty
   #   assert_equal(0, @room_1guests_within_room)
    

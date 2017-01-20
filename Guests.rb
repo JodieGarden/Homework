@@ -1,6 +1,6 @@
 class Guests
 
-  def initialize (name, money)
+  def initialize (name)
     @name = name 
   
 
