@@ -1,5 +1,5 @@
 class Songs
-
+attr_accessor :name
   def initialize (name)
     @name = name
 
@@ -13,7 +13,5 @@ class Songs
   #   return @room_name
   # end
 
-def add_song_to_room
-  @room_1[] << @Song_1
-end
+
 end

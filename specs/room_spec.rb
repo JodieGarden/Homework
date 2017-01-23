@@ -7,13 +7,14 @@ require_relative '../Rooms'
 class TestRooms < MiniTest::Test
 
   def setup
-    @room_1 = Rooms.new("Pop Room", 8, 15, [], [])
-    @room_2 = Rooms.new("80's Room", 15, 12, [], [])
-    @room_3 = Rooms.new("Indie Room", 12, 14, [], [])
+    @room_1 = Rooms.new("Pop Room", 15, 1, [])
+    @room_2 = Rooms.new("80's Room", 12, 1, [])
+    @room_3 = Rooms.new("Indie Room", 14, 1, [])
 
-    # @Guest_1 = Guests.new({"Jane" => 100})
-    # @Guest_2 = Guests.new({"Gemma"=> 175})
-    # @Guest_3 = Guests.new({"Lesley"=> 300})
+    @Guest_1 = Guests.new("Jane")
+    @Guest_2 = Guests.new("Gemma")
+    @Guest_3 = Guests.new("Lesley")
+  
 
   end
 
@@ -22,24 +23,20 @@ class TestRooms < MiniTest::Test
 
   end
 
-  def test_capacity
-    assert_equal(15, @room_2.capacity_limit)
-  end
+ 
 
-  def test_guests_within_room
-    assert_equal(0,@room_3.guests_within_room)
-  end
 
-  def test_move_guest_to_room
-    assert_equal(0, @room_1.guests_within_room)
-  end
 
   # def test_room_is_empty
   #   assert_equal(0, @room_1guests_within_room)
    
   # end
 
+  def test_move_guest_to_room
+    @room_1.move_guest_to_room(@Guest_1)
+    assert_equal(1, @room.guests)
 
+  end
 
 
 end

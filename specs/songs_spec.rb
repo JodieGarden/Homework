@@ -18,13 +18,15 @@ class TestSongs < MiniTest::Test
 
   end
 
+
+
   # def test_room_name
   #   assert_equal("Indie Room", @Song_3.room_name)
   # end
 
 
-  def test_add_song_to_room
-    assert_equal(["Song_1"], @room_1.song)
-  end
+  # def test_add_song_to_room
+  #   assert_equal(["Song_1"], @room_1.song)
+  # end
 
 end

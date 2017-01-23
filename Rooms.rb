@@ -1,11 +1,15 @@
 class Rooms
 
-  def initialize (name, capacity_limit, entry_fee, song, guests_within_room)
+  attr_accessor :name, :entry_fee, :guests, :room
+
+
+  def initialize (name, entry_fee, guests, room)
     @name = name
-    @capacity_limit = capacity_limit
+
     @entry_fee = entry_fee
-    @song = []
-    @guests_within_room = []
+
+    @guests = guests
+@room = Array.new
     # @guests = guests
   end
 
@@ -27,10 +31,9 @@ class Rooms
 #   @guests_within_room << guests
 # end
 
-def move_guest_to_room
-  @guests_within_room << @Guest_1
-  return @guests_within_room.length
 
+def move_guest_to_room(guests)
+  @room << guests
 
 end
 
